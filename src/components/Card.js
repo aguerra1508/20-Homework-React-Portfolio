@@ -1,28 +1,24 @@
 import React from "react";
-import CardBody from "./CardBody";
-import CardBtn from "./CardBtn";
-import CardImg from "./CardImage";
-import CardHeading from "./CardHeading";
 
-function Card({ title, image, gitHubUrl, deployedUrl, handleBtnClick }) {
+function Card(props) {
   return (
-    <div>
-      <CardHeading title={title} />
-      <CardImg image={image} />
-			<CardBody 
-			gitHubUrl={gitHubUrl}
-			deployedUrl={deployedUrl}
-			/>
-      <CardBtn
-        style={{ opacity: image ? 1 : 0 }}
-        onClick={handleBtnClick}
-        data-value="back"
-      />
-      <CardBtn
-        style={{ opacity: image ? 1 : 0 }}
-        onClick={handleBtnClick}
-        data-value="next"
-      />
+    <div className="card">
+      <div className="img-container">
+        <img alt={props.title} src={props.image} />
+      </div>
+      <div className="content">
+        <ul>
+          <li>
+            <strong>Title:</strong> {props.title}
+          </li>
+          <li>
+            <strong>GitHub Repo:</strong> {props.gitHubUrl}
+          </li>
+          <li>
+            <strong>Deployed App:</strong> {props.deployedUrl}
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
