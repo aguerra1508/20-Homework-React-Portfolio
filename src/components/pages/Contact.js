@@ -1,48 +1,92 @@
-import React from "react";
+import React, { Component } from 'react';
+import * as emailjs from 'emailjs-com';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import Wrapper from "../Wrapper";
 import Container from "../Container";
-import "../style.css";
-import Wrapper from "../Wrapper"
 
-const Contact = () => (
-	<Wrapper>
-<Container>
-		<div class="card">
-		<h2 class="card-title">Contact Me:</h2>
+class Contact extends Component {
+  state = {
+    name: '',
+    email: '',
+    message: '',
+  }
+handleSubmit(e) {
+    e.preventDefault()
+    const { name, email, message } = this.state
+    let templateParams = {
+      from_name: email,
+      to_name: 'aguerra1508@gmail.com',
+      message_html: message,
+     }
+     emailjs.send(
+      'gmail',
+      'template_orzrcxp',
+       templateParams,
+      'user_49PqrZ1QdEWq3RlbAXRNY'
+     )
+     this.resetForm()
+ }
+resetForm() {
+    this.setState({
+      name: '',
+      email: '',
+      message: '',
+    })
+  }
+handleChange = (param, e) => {
+    this.setState({ [param]: e.target.value })
+  }
+render() {
+    return (
+        <Wrapper>
+					<Container>
+					<div className="card">
+					<h2 class="card-title">Contact Me:</h2>
 		<div class="card-body">
-		<form class="gform pure-form pure-form-stacked" method="POST" data-email="aguerra1508@gmail.com"
-						action="https://script.google.com/macros/s/AKfycbwLd0CsFwZNim32b2C3cIOS-AsF8SQGrqv4nK3Y/exec">
-
-						<div class="form-elements form-group">
-							<fieldset class="form-elements form-group text-dark">
-								<label for="name">Name:</label>
-								<input id="name" class="form-control" name="name" placeholder="Name" />
-							</fieldset>
-
-							<fieldset class="form-elements form-group text-dark">
-								<label for="email">Email Address:</label>
-								<input id="email" class="form-control" name="email" type="email" placeholder="example@email.com" />
-							</fieldset>
-
-							<fieldset class="form-elements form-group text-dark">
-								<label for="message">Message: </label>
-								<textarea id="message" class="form-control" name="message" rows="3" placeholder="Message"></textarea>
-							</fieldset>
-
-						
-							<fieldset class="pure-group honeypot-field">
-								<input id="honeypot" type="hidden" name="honeypot" value="" />
-							</fieldset>
-
-							<button class="button-success btn btn-dark">
-								<i class="far fa-paper-plane"></i>&nbsp;Send</button>
-
-						</div>
-
-					</form>
-		</div>
-		</div>
-	</Container>
-	</Wrapper>
-);
-
-export default Contact;
+          <Form onSubmit={this.handleSubmit.bind(this)}>
+            
+<FormGroup controlId="formBasicName">
+              <Label>Name:</Label>
+              <Input
+                type="text"
+                name="name"
+                value={this.state.name}
+                className="text-primary"
+                onChange={this.handleChange.bind(this, 'name')}
+                placeholder="Name"
+              />
+            </FormGroup>
+						<FormGroup controlId="formBasicEmail">
+              <Label>Email address:</Label>
+              <Input
+                type="email"
+                name="email"
+                value={this.state.email}
+                className="text-primary"
+                onChange={this.handleChange.bind(this, 'email')}
+                placeholder="email@example.com"
+              />
+            </FormGroup>
+<FormGroup controlId="formBasicMessage">
+              <Label>Message:</Label>
+              <Input
+                type="textarea"
+                name="message"
+                className="text-primary"
+                value={this.state.message}
+								onChange={this.handleChange.bind(this, 'message')}
+								placeholder="Enter message here"
+              />
+            </FormGroup>
+<Button className="btn btn-dark" type="submit">
+<i class="far fa-paper-plane"></i>&nbsp;Send
+            </Button>
+          </Form>
+					</div>
+					</div>
+					</Container>
+        </Wrapper>
+    )
+  }
+}
+export default Contact
