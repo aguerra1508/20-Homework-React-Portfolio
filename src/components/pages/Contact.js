@@ -1,9 +1,11 @@
 import React from "react";
 import Container from "../Container";
 import "../style.css";
+import Wrapper from "../Wrapper"
 
 const Contact = () => (
-	<Container>
+	<Wrapper>
+<Container>
 		<div class="card">
 		<h2 class="card-title">Contact Me:</h2>
 		<div class="card-body">
@@ -40,6 +42,7 @@ const Contact = () => (
 		</div>
 		</div>
 	</Container>
-)
+	</Wrapper>
+);
 
 export default Contact;
