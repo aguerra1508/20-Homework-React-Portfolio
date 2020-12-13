@@ -3,7 +3,8 @@ import NavTabs from "./NavTabs";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
-import Footer from "./Footer"
+import Footer from "./Footer";
+import Header from "./Header";
 
 class Webpage extends Component {
   state = {
@@ -31,6 +32,7 @@ class Webpage extends Component {
           currentPage={this.state.currentPage}
           handlePageChange={this.handlePageChange}
         />
+				<Header></Header>
 				{this.renderPage()}
 				<Footer/>
       </div>
