@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Wrapper from "../Wrapper";
 import projects from "../projects.json";
-import Card from "../Card"
+import Projects from "../Projects"
 
 class Portfolio extends Component {
   // Setting this.state.friends to the friends json array
@@ -12,9 +12,9 @@ class Portfolio extends Component {
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
-      <Wrapper>
+			<Wrapper>
         {this.state.projects.map(project => (
-          <Card
+          <Projects
             id={project.id}
             key={project.id}
             title={project.title}
@@ -23,7 +23,7 @@ class Portfolio extends Component {
             deployedUrl={project.deployedUrl}
           />
         ))}
-      </Wrapper>
+				</Wrapper>
     );
   }
 }

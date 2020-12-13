@@ -2,42 +2,42 @@
   {
     "id": 1,
     "title": "Welding Worklist",
-    "image": "../../assets/Project 1 Welding Worklist.png",
+    "image": "./assets/Project 1 Welding Worklist.png",
     "gitHubUrl": "https://github.com/kevinserrano/Project1Week7",
 		"deployedUrl": "https://kevinserrano.github.io/Project1Week7/"
   },
   {
 		"id": 2,
     "title": "Coding Quiz",
-    "image": "../../assets/Coding Quiz.png",
+    "image": "../assets/Coding Quiz.png",
     "gitHubUrl": "https://github.com/aguerra1508/04-Homework-Coding-Quiz",
 		"deployedUrl": "https://aguerra1508.github.io/04-Homework-Coding-Quiz/"
   },
   {
     "id": 3,
     "title": "Note Taker",
-    "image": "../../assets/Note Taker.png",
+    "image": "./assets/Note Taker.png",
     "gitHubUrl": "https://github.com/aguerra1508/11-Homework-Note-Taker",
 		"deployedUrl": "https://murmuring-harbor-46677.herokuapp.com//"
   },
   {
     "id": 4,
     "title": "Who Dis?",
-    "image": "../../assets/Project 2 Who Dis.png",
+    "image": "./assets/Project 2 Who Dis.png",
     "gitHubUrl": "https://github.com/aguerra1508/Project2",
 		"deployedUrl": "https://peaceful-citadel-50333.herokuapp.com/"
   },
   {
     "id": 5,
     "title": "Workday Scheduler",
-    "image": "../../assets/Workday Scheduler.png",
+    "image": "./assets/Workday Scheduler.png",
     "gitHubUrl": "https://github.com/aguerra1508/05-Homework-Work-Day-Scheduler",
 		"deployedUrl": "https://aguerra1508.github.io/05-Homework-Work-Day-Scheduler/"
   },
   {
     "id": 6,
     "title": "Employee Directory",
-    "image": "../../assets/LandingPage.png",
+    "image": "./assets/LandingPage.png",
     "gitHubUrl": "https://github.com/aguerra1508/19-Homework-Employee-Directory",
 		"deployedUrl": "https://aguerra1508.github.io/19-Homework-Employee-Directory/"
 	}

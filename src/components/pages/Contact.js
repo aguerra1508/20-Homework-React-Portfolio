@@ -1,80 +1,39 @@
-import React, { Component } from "react";
+import React from "react";
+import Container from "../Container";
 
-class Contact extends Component {
-  // Setting the component's initial state
-  state = {
-    name: "",
-    email: "",
-    textArea: ""
-  };
+const Contact = () => (
+	<Container>
+		<form class="gform pure-form pure-form-stacked" method="POST" data-email="aguerra1508@gmail.com"
+						action="https://script.google.com/macros/s/AKfycbwLd0CsFwZNim32b2C3cIOS-AsF8SQGrqv4nK3Y/exec">
 
-  handleInputChange = event => {
-    // Getting the value and name of the input which triggered the change
-    let value = event.target.value;
-    const name = event.target.name;
-    // Updating the input's state
-    this.setState({
-      [name]: value
-    });
-  };
+						<div class="form-elements form-group">
+							<fieldset class="form-elements form-group text-dark">
+								<label for="name">Name:</label>
+								<input id="name" class="form-control" name="name" placeholder="Name" />
+							</fieldset>
 
-  handleFormSubmit = event => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    event.preventDefault();
-    alert("Thanks for contacting me! I will get back to you soon!");
+							<fieldset class="form-elements form-group text-dark">
+								<label for="email">Email Address:</label>
+								<input id="email" class="form-control" name="email" type="email" placeholder="example@email.com" />
+							</fieldset>
 
-    this.setState({
-      firstName: "",
-      lastName: "",
-      password: ""
-    });
-  };
+							<fieldset class="form-elements form-group text-dark">
+								<label for="message">Message: </label>
+								<textarea id="message" class="form-control" name="message" rows="3" placeholder="Message"></textarea>
+							</fieldset>
 
-  render() {
-    // Notice how each input has a `value`, `name`, and `onChange` prop
-    return (
-			<div class="card">
-				<div class="card-header">Contact</div>
-  <div class="card-body">
-	<form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Name:</label>
-		<input
-            value={this.state.name}
-            name="name"
-            onChange={this.handleInputChange}
-            type="text"
-            placeholder="Name"
-          />
-	</div>
-	<div class="form-group">
-		 <label for="exampleFormControlInput1">Email:</label>
-		<input
-            value={this.state.email}
-            name="email"
-            onChange={this.handleInputChange}
-            type="email"
-            placeholder="Email"
-          />
-  </div>
-	<div class="form-group">
-    <label for="exampleFormControlTextarea1">Message:</label>
-    <textarea
-            value={this.state.textArea}
-            name="textArea"
-            onChange={this.handleInputChange}
-            rows="3"
-            placeholder="Message"
-          />
-  </div>
-	<button onClick={this.handleFormSubmit}>Submit</button>
-</form>
+						
+							<fieldset class="pure-group honeypot-field">
+								<input id="honeypot" type="hidden" name="honeypot" value="" />
+							</fieldset>
 
+							<button class="button-success btn btn-danger">
+								<i class="far fa-paper-plane"></i>&nbsp;Send</button>
 
-  </div>
-</div>
-    );
-  }
-}
+						</div>
+
+					</form>
+	</Container>
+)
 
 export default Contact;

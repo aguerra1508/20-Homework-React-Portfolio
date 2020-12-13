@@ -2,7 +2,6 @@ import React from "react";
 
 const About = () => (
 <div class="card">
-  <div class="card-header">About Me</div>
   <div class="card-body">
 	<img src="https://media-exp1.licdn.com/dms/image/C4E03AQHsugInc3qX3w/profile-displayphoto-shrink_400_400/0?e=1609977600&v=beta&t=mzXR650hBBKSPTIefn1dRUr3EC9re0PZK3p9B4CKPGQ" alt="Analee Guerra"></img>
 		Hi, I'm Analee Guerra. I am a proud member of the Fightin'
