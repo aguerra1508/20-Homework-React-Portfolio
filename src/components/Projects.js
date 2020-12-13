@@ -3,13 +3,11 @@ import React from "react";
 function Card(props) {
   return (
     <div className="card">
-      <div className="img-container">
-        <img alt={props.title} src={props.image} />
-      </div>
       <div className="content">
+			<img className="imgport" alt={props.title} src={props.image}/>
         <ul>
           <li>
-            Title: {props.title}
+            <strong>Title:</strong> {props.title}
           </li>
           <li>
             <a href={props.gitHubUrl} target="_blank">GitHub Repo</a>
