@@ -74,16 +74,16 @@ footer {
 .contact-list{
 	margin-top: 25px;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Media Queries*/
 
 /*Small devices (phone)*/
 @media (min-width: 400px) {
-
-	/*Formatting for images on portfolio page*/
-	.imgport {
-		padding-left: 10px;
-		padding-bottom: 20px;
-	}
 
 	/*Formatting for image on index page*/
 	.imgindex {
@@ -98,21 +98,5 @@ footer {
 	/*Formatting to reduce container size for visible side margins*/
 	.container {
 		width: 55%;
-		margin-left: 50px;
-	}
-
-	/*Formatting for images for portfolio*/
-	.imgport {
-		padding-left: 20px;
-	}
-}
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-
-	/*Formatting to adjust container size for larger screens*/
-	.container {
-		width: 50%;
-		margin-left: 50px;
 	}
 }

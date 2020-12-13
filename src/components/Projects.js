@@ -4,8 +4,8 @@ function Card(props) {
   return (
     <div className="card">
       <div className="content">
-        <ul>
-					<img src={props.image} className="imgport" alt={props.title}></img>
+        <ul >
+					<img src={props.image} className="imgport center" alt={props.title}></img>
           <li>
             <strong>Title:</strong> {props.title}
           </li>
