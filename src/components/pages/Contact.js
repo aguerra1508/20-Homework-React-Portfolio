@@ -1,8 +1,12 @@
 import React from "react";
 import Container from "../Container";
+import "../style.css";
 
 const Contact = () => (
 	<Container>
+		<div class="card">
+		<h2 class="card-title">Contact Me:</h2>
+		<div class="card-body">
 		<form class="gform pure-form pure-form-stacked" method="POST" data-email="aguerra1508@gmail.com"
 						action="https://script.google.com/macros/s/AKfycbwLd0CsFwZNim32b2C3cIOS-AsF8SQGrqv4nK3Y/exec">
 
@@ -27,12 +31,14 @@ const Contact = () => (
 								<input id="honeypot" type="hidden" name="honeypot" value="" />
 							</fieldset>
 
-							<button class="button-success btn btn-danger">
+							<button class="button-success btn btn-dark">
 								<i class="far fa-paper-plane"></i>&nbsp;Send</button>
 
 						</div>
 
 					</form>
+		</div>
+		</div>
 	</Container>
 )
 
